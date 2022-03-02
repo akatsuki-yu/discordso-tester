@@ -1,0 +1,68 @@
+<!--
+	2021.06.23 v1.00 Yu Akatsuki @akatsuki_yu
+	2022.02.24 v1.01 Yu Akatsuki @akatsuki_yu ユーザー数を指定可能に（1～15）
+-->
+<html>
+<head>
+<meta charset="utf-8"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel="stylesheet" type="text/css">
+  <title>Discord StreamKit Overlay Test</title>
+  <link rel="stylesheet" href="./overlay/df54f6f003d712eb9bf4.css"><!-- ファイル名について：README.mdを読んで下さい -->
+</head>
+<body style="margin: 0;">
+  <div id="app-mount">
+	<div style="font-family:Whitney, sans-serif;background-color:transparent;" class=" " data-reactid=".0">
+		<div class="voice-container" data-reactid=".0.0">
+			<ul class="voice-states" data-reactid=".0.0.0">
+			</ul>
+		</div>
+	</div>
+  </div>
+
+<script type="text/javascript">
+<!--
+// ページロード時に指定の人数分、アイコン等を並べる。
+// 最小１、最大15。指定がない場合や指定がおかしい場合は10人分生成する。
+// 指定はURL＋「?u=4」のように記述する。　例： https://akatsuki-yu.github.io/streamcss/?u=4
+
+// ページ読み込み時に実行
+window.onload = function(){
+	var usercount = 10;		/* default */
+
+	/* reference : https://maku77.github.io/js/web/search-params.html */
+	const searchParams = new URLSearchParams(window.location.search);
+
+	if (searchParams.has('u')) {
+		var paramnums = Number(searchParams.get('u'));
+
+		if (!isNaN(paramnums)) {
+			if (paramnums >=1 && paramnums <= 15) {
+				usercount = paramnums;
+			}
+		}
+	}
+	const element = document.getElementsByClassName("voice-states");
+
+	for (var i=0; i < usercount; i++) {
+		var idnum = i > 9 ? i - 10 : i;
+		var idstr = idnum.toString().repeat(18);
+		/* ユーザー生成部 */
+		element[0].insertAdjacentHTML('beforeend' ,
+				'<li class="voice-state" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '">\n'
+				+'<img class="avatar' + (i % 3 == 0 ? ' speaking' : '') + '" src="./ico/player' + idnum.toString() + '.png" data-reactid=".0.0.0.$' + idstr + '.$=10">\n'
+				+'<div class="user" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11">\n'
+				+'<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11.0">プレイヤー' + idnum.toString() + '</span>\n</div>\n</li>\n\n');
+	}
+}
+-->
+</script>
+<!--
+生成するHTMLタグ
+<li class="voice-state" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111">
+	<img class="avatar speaking" src="./ico/player1.png" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111.$=10">
+	<div class="user" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111.$/=11">
+		<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111.$/=11.0">プレイヤー１</span>
+	</div>
+</li>
+-->
+</body></html>

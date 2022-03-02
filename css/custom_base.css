@@ -1,0 +1,84 @@
+/*
+ * 2021.06.23 @akatsuki_yu
+ * 2022.02.24 @akatsuki_yu update html側にベタ書きされている要素を追加
+ */
+
+
+body {
+	/* 上はhtmlにベタ書きされている箇所 */
+	/* margin:0; */
+	background-color:transparent;
+}
+
+/* body直下にあるID。voice-containerの上。cssには何も記述無し */
+#app-mount {
+}
+
+#app-mount > div {
+	/* ２行ともhtmlにベタ書きされている */
+	/* font-family:Whitney, sans-serif; */
+	/* background-color:transparent; */
+}
+
+
+.voice-container {
+	font-family:Whitney;
+	font-weight:600;
+	font-size:16px;
+	line-height:19px;
+	color:#fff;
+}
+
+.voice-container .voice-states {
+	list-style-type:none;
+	padding-left:15px;
+}
+
+.voice-container .voice-states .voice-state {
+	height:50px;
+	margin-bottom:8px;
+}
+
+.voice-container .voice-states .voice-state .avatar {
+	height:50px;
+	width:50px;
+	border:3px solid transparent;
+	border-radius:50%;
+	float:left;
+	margin-right:8px;
+}
+
+.voice-container .voice-states .voice-state .avatar.speaking {
+	border-color:#43b581;
+}
+
+.voice-container .voice-states .voice-state .user {
+	padding-top:18px;
+}
+
+.voice-container .voice-states .voice-state .user .name {
+	background-color:#1e2124;
+	border-radius:3px;
+	padding:4px 6px;
+}
+
+.name {
+	/* 全行htmlにベタ書きされているstyle */
+	/* color:#ffffff; */
+	/* font-size:14px; */
+	/* background-color:rgba(30, 33, 36, 0.95); */
+}
+
+
+.voice-container .voice-states .voice-state.small-avatar {
+	height:40px;
+}
+
+.voice-container .voice-states .voice-state.small-avatar .avatar {
+	height:40px;
+	width:40px;
+}
+
+.voice-container .voice-states .voice-state.small-avatar .user {
+	padding-top:12px;
+}

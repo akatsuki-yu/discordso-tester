@@ -1,0 +1,64 @@
+/*
+ * Memo: @akatsuki_yu
+ * Discord Streamkitで生成されているHTML内に記載されているcssの中身からボイスチャットに関する部分を抜き出し・整形したもの
+ * 元のURL： /overlay/3ca453aad1ff12db27e3.css（現在はアクセス不能）
+ */
+
+
+body {
+	background-color:transparent;
+}
+
+.voice-container {
+	font-family:Whitney;
+	font-weight:600;
+	font-size:16px;
+	line-height:19px;
+	color:#fff;;
+}
+
+.voice-container .voice-states {
+	list-style-type:none;
+	padding-left:15px;
+}
+
+.voice-container .voice-states .voice-state {
+	height:50px;
+	margin-bottom:8px;
+}
+
+.voice-container .voice-states .voice-state .avatar {
+	height:50px;
+	width:50px;
+	border:3px solid transparent;
+	border-radius:50%;
+	float:left;
+	margin-right:8px;
+}
+
+.voice-container .voice-states .voice-state .avatar.speaking {
+	border-color:#43b581;
+}
+
+.voice-container .voice-states .voice-state .user {
+	padding-top:18px;
+}
+
+.voice-container .voice-states .voice-state .user .name {
+	background-color:#1e2124;
+		border-radius:3px;
+		padding:4px 6px;
+}
+
+.voice-container .voice-states .voice-state.small-avatar {
+	height:40px;
+}
+
+.voice-container .voice-states .voice-state.small-avatar .avatar {
+	height:40px;
+	width:40px;
+}
+
+.voice-container .voice-states .voice-state.small-avatar .user {
+	padding-top:12px;
+}
