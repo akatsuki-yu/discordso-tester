@@ -2,7 +2,7 @@
 ![discorddso-tester](https://user-images.githubusercontent.com/44968693/156472286-79d3d548-7478-480d-999c-4e4a5e0b8651.png)
 
 ## このプロジェクトのデータについて
-__[Discord Streamkit Overlay](https://streamkit.discord.com/overlay)__のテスト用HTMLやカスタム用cssのファイル群です。  
+[Discord Streamkit Overlay](https://streamkit.discord.com/overlay)のテスト用HTMLやカスタム用cssのファイル群です。  
 私自身がカスタムcssを書く時に、いちいちボイスチャットに入って確かめたりしなければならず、不便だなぁと思っていたことと、デフォルトのcssに何が書いてあるか調べるために、このファイル群を作成しました。  
 
 __[https://albalunaweb.net/note/10296.html](https://albalunaweb.net/note/10296.html)__
@@ -18,18 +18,18 @@ css：本家が読み込んでいるものをダウンロードし、同じく�
 ## テスト用HTMLの使い方
 ### 配信画面へ取り込んで確認する
 - [OBS（Open Broadcaster Software）](https://obsproject.com/ja) や [SLOBS（Streamlabs OBS、Streamlabs Desktop）](https://streamlabs.com/)のソースを追加（＋ボタン）から、**「ブラウザソース」**を選択
-- **「新しいソースを追加」**を選択し、適当な名前を付ける
-- 「ブラウザソースの設定」画面の「URL」に以下のURLをコピペ
+- 「**新しいソースを追加**」を選択し、適当な名前を付ける
+- 「ブラウザソースの設定」画面の「URL」に以下のURLをコピペ  
 	`https://akatsuki-yu.github.io/discorddso-tester/`
 - 幅と高さは、配信画面のサイズや使用したいcssに応じて適宜変更。基本的に**幅1920、高さ1080**でいいと思います。
 - 「カスタムcss」欄に、使いたいcssをコピペする。
 
 ### ブラウザで表示して確認する
-このプロジェクトのファイルをローカル保存し、**index.html**をブラウザで表示してください。  
-保存はファイル一覧が表示されている箇所の右上、緑色の**「Code」**ボタンを押し、**「Download ZIP」**をクリックすると、プロジェクト内のデータがまとめてダウンロード出来ます。
+このプロジェクトのファイルをローカル保存し、index.htmlをブラウザで表示してください。  
+保存はファイル一覧が表示されている箇所の右上、緑色の「**Code**」ボタンを押し、「**Download ZIP**」をクリックすると、プロジェクト内のデータがまとめてダウンロード出来ます。
 
 自作cssを読み込んで使う場合は、index.html内読み込みタグを追加してください。  
-__例）index.htmlと同階層にcustom.cssを置いた場合__
+__例）index.htmlと同階層にcustom.cssを置いた場合__  
 `<link rel="stylesheet" href="./custom.css">`
 
 なお、SLOBSでの表示は概ね[Google Chrome](https://www.google.com/intl/ja_jp/chrome/)と一致するようです。  
@@ -38,12 +38,13 @@ FireFoxでの表示とはズレがありました。
 ### 表示する人数を変更する
 配信画面へ取り込む場合もブラウザで表示する場合も共通です。
 URLの後ろに`?u=(数字)`を追加すると、人数が変わります。  
-__例）15人表示したい場合__
+__例）15人表示したい場合__  
 `https://akatsuki-yu.github.io/discorddso-tester/?u=15`
 
 デフォルトでは10人表示するようになっています。  
 **最小は1、最大は20**です。それ以外の数値や数値以外を入力すると、10人で表示されるようになっています。  
-表示が遅くなるおそれがあるので人数制限をかけています。さすがにコラボ配信でも20人もいれば足りるでしょう…多分
+表示が遅くなるおそれがあるので人数制限をかけています。  
+さすがにコラボ配信でも20人もいれば足りるでしょう…多分
 
 ### 現在判明している不具合
 HTMLもcssも同じはずなのに、何故かアイコンの表示開始位置が本家と異なっているようです。  
@@ -66,7 +67,7 @@ HTMLが読み込んでいるcssは__overlay/df54f6f003d712eb9bf4.css__です。
 Discord Streamkitのサーバーから直接読み込むことも試みましたが、読み込むファイル名が変わることがある（もとのファイル名は削除される）ようなので、確実にcssを適用するためにダウンロードしたものを使用しています。
 
 ## 謝辞
-一部cssでお借りしているデータについては、cssの取説ページに記載し、このページでは省略しています。
+一部cssでお借りしているデータについては、cssの取説ページに記載し、このページでは省略しています。  
 __[https://albalunaweb.net/assets/stream](https://albalunaweb.net/stream)__
 
 ### Discord Streamkit Overlay
@@ -75,7 +76,7 @@ index.htmlとdefault.cssはDiscord Streamkit Overlayのボイスチャット用U
 
 ### ユーザーアイコン
 商用利用無料、再配布可能なフリーアイコン「Default Icon」を色変更して使用しています。  
-ライセンスはCC3.0です。
+ライセンスはCC3.0です。  
 **[http://www.defaulticon.com/](http://www.defaulticon.com/)**
 
 ## その他
@@ -85,8 +86,8 @@ index.htmlとdefault.cssはDiscord Streamkit Overlayのボイスチャット用U
 参考：[たくさんあるオープンソースライセンスのそれぞれの特徴のまとめ | コリス](https://coliss.com/articles/build-websites/operation/work/choose-a-license-by-github.html)
 
 ### 著作権表示
-HTMLソース、およびHTMLが読み込んでいるデフォルトのcss
+HTMLソース、およびHTMLが読み込んでいるデフォルトのcss  
 __Copylight Discord Inc.__
 
-カスタムcss
+カスタムcss  
 __Copylight 2021-2022 Yu Akatsuki.__
