@@ -1,6 +1,6 @@
 <!--
 	2021.06.23 v1.00 Yu Akatsuki @akatsuki_yu
-	2022.02.24 v1.01 Yu Akatsuki @akatsuki_yu ユーザー数を指定可能に（1～15）
+	2022.02.24 v1.01 Yu Akatsuki @akatsuki_yu ユーザー数を指定可能に（1～20）
 -->
 <html>
 <head>
@@ -22,7 +22,7 @@
 <script type="text/javascript">
 <!--
 // ページロード時に指定の人数分、アイコン等を並べる。
-// 最小１、最大15。指定がない場合や指定がおかしい場合は10人分生成する。
+// 最小１、最大20。指定がない場合や指定がおかしい場合は10人分生成する。
 // 指定はURL＋「?u=4」のように記述する。　例： https://akatsuki-yu.github.io/streamcss/?u=4
 
 // ページ読み込み時に実行
@@ -51,7 +51,7 @@ window.onload = function(){
 				'<li class="voice-state" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '">\n'
 				+'<img class="avatar' + (i % 3 == 0 ? ' speaking' : '') + '" src="./ico/player' + idnum.toString() + '.png" data-reactid=".0.0.0.$' + idstr + '.$=10">\n'
 				+'<div class="user" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11">\n'
-				+'<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11.0">' + (i % 2 == 0 ? 'ユーザー' : 'player') + usercount.toString() + '</span>\n</div>\n</li>\n\n');
+				+'<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11.0">' + (i % 2 == 0 ? 'ユーザー' : 'player') + i.toString() + '</span>\n</div>\n</li>\n\n');
 	}
 }
 -->
