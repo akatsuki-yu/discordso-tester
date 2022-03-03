@@ -1,0 +1,97 @@
+/* Discord Streamkit Overlay用縦並びCSS（人数を自分で指定）
+ * (c)2021-2022 Yu Akatsuki @akatsuki_yu
+ * Last update : 2022.03.03
+ * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
+ */
+
+
+:root {
+	/* 書き換えるところ:start */
+	--usernum:10;		/* プレイヤー人数初期値。計算に使う */
+	--marginnum:5px;	/* アイコン同士の隙間の定義。計算に使う */
+	--fontsize:1;		/* フォントサイズ指定。10pxを基準に割合を小数で指定する。 */
+
+	/* Discordのアイコン（アバタ―）のサイズを算出するところ */
+	--avatarsize:calc((100vh - var(--marginnum) * (var(--usernum) + 3) ) / var(--usernum));
+}
+
+@keyframes pyonpyon {
+	0% { transform: translate(0, 0); }
+	50% { transform: translate(0, -0.6em); }	/* ぴょんぴょんの高さを変える場合、0.5em→1emにする */
+	100% { transform: translate(0, 0); }
+}
+
+body {
+	overflow: hidden;
+}
+
+.voice-container {
+	margin:0;
+	padding:0;
+}
+
+.voice-container .voice-states {
+	padding-left:0;
+	margin:0;
+	position:absolute;
+	top:0;
+	left:5;
+}
+
+.voice-container .voice-states .voice-state {
+	width:var(--avatarsize);
+	height:var(--avatarsize);
+    margin-bottom: var(--marginnum);		/* 次のアイコンとの距離 */
+	list-style-type: none;
+	position:relative;
+}
+
+.voice-container .voice-states .voice-state .avatar {
+	height: var(--avatarsize);
+    width: var(--avatarsize);
+    border:0 solid transparent;
+    border-radius: 0;
+    float: none;
+    margin-right: 0px;
+	margin:0;
+}
+
+.avatar {
+	margin:0;
+	filter: brightness(40%);
+}
+
+
+.voice-container .voice-states .voice-state .avatar.speaking {
+	border-color:transparent !important;
+}
+
+.speaking {
+	filter: brightness(100%) !important;
+	animation: pyonpyon 0.5s infinite ease;
+	border:0;
+	/* box-shadow: 0 0 10px yellow; */
+}
+
+.voice-container .voice-states .voice-state .user {
+	padding-top:0;
+	/* z-index:2; */
+	position:absolute;
+	bottom:0;
+	display:inline-block;
+	text-align:left;
+	overflow:hidden;
+	/* background-color:rgba(33, 31, 30, 0.6) !important; */
+	white-space:nowrap;
+	word-break:break-all;
+	transform-origin: left bottom;
+}
+
+.voice-container .voice-states .voice-state .user .name {
+	display:block;
+	border:0;
+	margin:0;
+	border-radius:0;
+	/* background-color:transparent !important; */
+}
+
