@@ -49,7 +49,7 @@ window.onload = function(){
 		/* ユーザー生成部 */
 		element[0].insertAdjacentHTML('beforeend' ,
 				'<li class="voice-state" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '">\n'
-				+'<img class="avatar' + (i % 3 == 0 ? ' speaking' : '') + '" src="./ico/player' + idnum.toString() + '.png" data-reactid=".0.0.0.$' + idstr + '.$=10">\n'
+				+'<img class="avatar' + (i % 3 == 1 ? ' speaking' : '') + '" src="./ico/player' + idnum.toString() + '.png" data-reactid=".0.0.0.$' + idstr + '.$=10">\n'
 				+'<div class="user" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11">\n'
 				+'<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11.0">' + (i % 2 == 0 ? 'ユーザー' : 'player') + i.toString() + '</span>\n</div>\n</li>\n\n');
 	}

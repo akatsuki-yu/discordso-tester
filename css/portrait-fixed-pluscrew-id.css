@@ -1,14 +1,14 @@
-/* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える（ID不使用型）
+/* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える（ID使用型）
  * required : portrait-fixed.css
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
  * Last update : 2022.03.03
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
+@charset "UTF-8";
 
 :root {
 	 /* クルーメイト色指定部 */
 	 --username:var(--red);
-
 
 	 /* AutoMuteUs : https://github.com/automuteus/automuteus imgsize: 535*686 */
 	 --banana:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubanana.png');
@@ -32,7 +32,8 @@
 }
 
 .voice-container .voice-states {
-	right:0;
+	left:auto;
+	right:5px;
 }
 
 /* クルーメイトアイコン設定部 */

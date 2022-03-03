@@ -4,6 +4,7 @@
  * Last update : 2022.03.03
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
+@charset "UTF-8";
 
 :root {
 	 /* クルーメイト色指定部。以下は初期値。カスタムcss側で更に上書きする */
@@ -45,7 +46,8 @@
 }
 
 .voice-container .voice-states {
-	right:0;
+	left:auto;
+	right:5px;
 }
 
 
