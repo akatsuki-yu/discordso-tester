@@ -20,7 +20,7 @@ css：本家が読み込んでいるものをダウンロードし、同じく�
 - [OBS（Open Broadcaster Software）](https://obsproject.com/ja) や [SLOBS（Streamlabs OBS、Streamlabs Desktop）](https://streamlabs.com/)のソースを追加（＋ボタン）から、「__ブラウザソース__」を選択
 - 「__新しいソースを追加__」を選択し、適当な名前を付ける
 - 「__ブラウザソースの設定__」画面の「URL」に以下のURLをコピペ  
-	`https://akatsuki-yu.github.io/discorddso-tester/`
+	`https://akatsuki-yu.github.io/discordso-tester/`
 - 幅と高さは、配信画面のサイズや使用したいcssに応じて適宜変更。基本的に**幅1920、高さ1080**でいいと思います。
 - 「カスタムcss」欄に、使いたいcssをコピペする。
 
@@ -39,7 +39,7 @@ FireFoxでの表示とはズレがありました。（特にpx単位で調整�
 配信画面へ取り込む場合もブラウザで表示する場合も共通です。  
 URLの後ろに`?u=(数字)`を追加すると、人数が変わります。  
 __例）15人表示したい場合__  
-`https://akatsuki-yu.github.io/discorddso-tester/?u=15`
+`https://akatsuki-yu.github.io/discordso-tester/?u=15`
 
 デフォルトでは10人表示するようになっています。  
 **最小は1、最大は20**です。それ以外の数値や数値以外を入力すると、10人で表示されるようになっています。  
