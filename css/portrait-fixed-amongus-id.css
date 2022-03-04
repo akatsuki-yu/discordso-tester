@@ -7,6 +7,17 @@
 @charset "UTF-8";
 
 :root {
+	--test01:var(--red);
+	--test02:var(--blue);
+	--test03:var(--green);
+	--test04:var(--pink);
+	--test05:var(--orange);
+	--test06:var(--yellow);
+	--test07:var(--black);
+	--test08:var(--white);
+	--test09:var(--purple);
+	--test10:var(--brown);
+
 	 /* AutoMuteUs : https://github.com/automuteus/automuteus imgsize: 535*686 */
 	 --red:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aured.png');
 	 --blue:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublue.png');
@@ -48,13 +59,13 @@
 }
 
 /* テストデータ用ユーザーID設定 */
-.voice-state[data-reactid*="000000000000000000"]:after { background-image:var(--crew01); }
-.voice-state[data-reactid*="111111111111111111"]:after { background-image:var(--crew02); }
-.voice-state[data-reactid*="222222222222222222"]:after { background-image:var(--crew03); }
-.voice-state[data-reactid*="333333333333333333"]:after { background-image:var(--crew04); }
-.voice-state[data-reactid*="444444444444444444"]:after { background-image:var(--crew05); }
-.voice-state[data-reactid*="555555555555555555"]:after { background-image:var(--crew06); }
-.voice-state[data-reactid*="666666666666666666"]:after { background-image:var(--crew07); }
-.voice-state[data-reactid*="777777777777777777"]:after { background-image:var(--crew08); }
-.voice-state[data-reactid*="888888888888888888"]:after { background-image:var(--crew09); }
-.voice-state[data-reactid*="999999999999999999"]:after { background-image:var(--crew10); }
+.voice-state[data-reactid*="000000000000000000"]:after { background-image:var(--test01); }
+.voice-state[data-reactid*="111111111111111111"]:after { background-image:var(--test02); }
+.voice-state[data-reactid*="222222222222222222"]:after { background-image:var(--test03); }
+.voice-state[data-reactid*="333333333333333333"]:after { background-image:var(--test04); }
+.voice-state[data-reactid*="444444444444444444"]:after { background-image:var(--test05); }
+.voice-state[data-reactid*="555555555555555555"]:after { background-image:var(--test06); }
+.voice-state[data-reactid*="666666666666666666"]:after { background-image:var(--test07); }
+.voice-state[data-reactid*="777777777777777777"]:after { background-image:var(--test08); }
+.voice-state[data-reactid*="888888888888888888"]:after { background-image:var(--test09); }
+.voice-state[data-reactid*="999999999999999999"]:after { background-image:var(--test10); }
