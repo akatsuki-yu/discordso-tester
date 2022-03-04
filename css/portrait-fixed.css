@@ -8,7 +8,6 @@
 :root {
 	--usernum:10;		/* プレイヤー人数初期値。計算に使う */
 	--marginnum:5px;	/* アイコン同士の隙間の定義。計算に使う */
-	--fontsize:1;		/* フォントサイズ指定。10pxを基準に割合を小数で指定する。 */
 
 	/* Discordのアイコン（アバタ―）のサイズを算出するところ */
 	--avatarsize:calc((100vh - var(--marginnum) * (var(--usernum) + 3) ) / var(--usernum));
@@ -85,6 +84,7 @@ body {
 	white-space:nowrap;
 	word-break:break-all;
 	transform-origin: left bottom;
+	max-width: var(--avatarsize);
 }
 
 .voice-container .voice-states .voice-state .user .name {

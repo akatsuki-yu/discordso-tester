@@ -71,7 +71,7 @@ Discord Streamkitのサーバーから直接読み込むことも試みました
 __[https://albalunaweb.net/assets/stream](https://albalunaweb.net/stream)__
 
 ### Discord Streamkit Overlay
-index.htmlとdefault.cssはDiscord Streamkit Overlayのボイスチャット用URLで生成されるHTML、およびその中で読み込まれているcssを抜き出し・整形したものです。  
+index.htmlとoverlayフォルダ内css、css/custom_base.cssはDiscord Streamkit Overlayのボイスチャット用URLで生成されるHTML、およびその中で読み込まれているcssを抜き出し・整形したものです。  
 **[Discord Streamkit Overlay](https://streamkit.discord.com/overlay)**
 
 ### ユーザーアイコン

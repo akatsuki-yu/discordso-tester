@@ -5,7 +5,7 @@
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
-@import url('https://cdn.jsdelivr.net/gh/akatsuki-yu/discordso-tester@main/css/portrait-fixed-amongus-id.css');
+@import url('https://cdn.jsdelivr.net/gh/akatsuki-yu/discordso-tester/css/portrait-fixed-amongus-id.css');
 
 :root {
 	 /* ユーザーID不使用タイプの初期値 */
