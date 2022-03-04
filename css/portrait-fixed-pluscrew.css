@@ -1,4 +1,4 @@
-/* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える（ID不使用型）
+/* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える
  * required : portrait-fixed.css
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
  * Last update : 2022.03.03
@@ -7,7 +7,7 @@
 @charset "UTF-8";
 
 :root {
-	 /* クルーメイト色指定部。以下は初期値。カスタムcss側で更に上書きする */
+	 /* ユーザーID不使用タイプの初期値 */
 	 --crew01:var(--red);
 	 --crew02:var(--blue);
 	 --crew03:var(--green);
@@ -24,33 +24,32 @@
 	 --crew14:var(--rose);
 	 --crew15:var(--banana);
 
+
 	 /* AutoMuteUs : https://github.com/automuteus/automuteus imgsize: 535*686 */
-	 --banana:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubanana.png');
-	 --black:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublack.png');
+	 --red:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aured.png');
 	 --blue:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublue.png');
-	 --brown:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubrown.png');
-	 --coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
-	 --cyan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucyan.png');
-	 --gray:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augray.png');
 	 --green:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augreen.png');
+	 --pink:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupink.png');
+	 --orange:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auorange.png');
+	 --yellow:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auyellow.png');
+	 --black:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublack.png');
+	 --white:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auwhite.png');
+	 --purple:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupurple.png');
+	 --brown:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubrown.png');
+	 --cyan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucyan.png');
 	 --lime:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aulime.png');
 	 --maroon:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aumaroon.png');
-	 --orange:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auorange.png');
-	 --pink:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupink.png');
-	 --purple:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupurple.png');
-	 --red:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aured.png');
 	 --rose:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aurose.png');
+	 --banana:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubanana.png');
+	 --gray:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augray.png');
 	 --tan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/autan.png');
-	 --white:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auwhite.png');
-	 --yellow:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auyellow.png');
+	 --coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
 }
 
 .voice-container .voice-states {
 	left:auto;
 	right:5px;
 }
-
-
 
 /* クルーメイトアイコン設定部 */
 .voice-state:after {
@@ -66,49 +65,32 @@
 	content: '';/*何も入れない*/
 }
 
-/* クルーメイトアイコンを設定しているところ（rootで指定し直しているので触らない） */
-.voice-state:nth-child(1)::after {
-	background-image:var(--crew01);
-}
-.voice-state:nth-child(2)::after {
-	background-image:var(--crew02);
-}
-.voice-state:nth-child(3)::after {
-	background-image:var(--crew03);
-}
-.voice-state:nth-child(4)::after {
-	background-image:var(--crew04);
-}
-.voice-state:nth-child(5)::after {
-	background-image:var(--crew05);
-}
-.voice-state:nth-child(6)::after {
-	background-image:var(--crew06);
-}
-.voice-state:nth-child(7)::after {
-	background-image:var(--crew07);
-}
-.voice-state:nth-child(8)::after {
-	background-image:var(--crew08);
-}
-.voice-state:nth-child(9)::after {
-	background-image:var(--crew09);
-}
-.voice-state:nth-child(10)::after {
-	background-image:var(--crew10);
-}
-.voice-state:nth-child(11)::after {
-	background-image:var(--crew11);
-}
-.voice-state:nth-child(12)::after {
-	background-image:var(--crew12);
-}
-.voice-state:nth-child(13)::after {
-	background-image:var(--crew13);
-}
-.voice-state:nth-child(14)::after {
-	background-image:var(--crew14);
-}
-.voice-state:nth-child(15)::after {
-	background-image:var(--crew15);
-}
+/* クルーメイトアイコン設定部 */
+/* ユーザーID不使用タイプの設定群 */
+.voice-state:nth-child(1)::after {	background-image:var(--crew01);}
+.voice-state:nth-child(2)::after {	background-image:var(--crew02);}
+.voice-state:nth-child(3)::after {	background-image:var(--crew03);}
+.voice-state:nth-child(4)::after {	background-image:var(--crew04);}
+.voice-state:nth-child(5)::after {	background-image:var(--crew05);}
+.voice-state:nth-child(6)::after {	background-image:var(--crew06);}
+.voice-state:nth-child(7)::after {	background-image:var(--crew07);}
+.voice-state:nth-child(8)::after {	background-image:var(--crew08);}
+.voice-state:nth-child(9)::after {	background-image:var(--crew09);}
+.voice-state:nth-child(10)::after {	background-image:var(--crew10);}
+.voice-state:nth-child(11)::after {	background-image:var(--crew11);}
+.voice-state:nth-child(12)::after {	background-image:var(--crew12);}
+.voice-state:nth-child(13)::after {	background-image:var(--crew13);}
+.voice-state:nth-child(14)::after {	background-image:var(--crew14);}
+.voice-state:nth-child(15)::after {	background-image:var(--crew15);}
+
+/* ユーザーID使用タイプ：テストデータ用ユーザーID設定 */
+.voice-state[data-reactid*="000000000000000000"]:after { background-image:var(--crew01); }
+.voice-state[data-reactid*="111111111111111111"]:after { background-image:var(--crew02); }
+.voice-state[data-reactid*="222222222222222222"]:after { background-image:var(--crew03); }
+.voice-state[data-reactid*="333333333333333333"]:after { background-image:var(--crew04); }
+.voice-state[data-reactid*="444444444444444444"]:after { background-image:var(--crew05); }
+.voice-state[data-reactid*="555555555555555555"]:after { background-image:var(--crew06); }
+.voice-state[data-reactid*="666666666666666666"]:after { background-image:var(--crew07); }
+.voice-state[data-reactid*="777777777777777777"]:after { background-image:var(--crew08); }
+.voice-state[data-reactid*="888888888888888888"]:after { background-image:var(--crew09); }
+.voice-state[data-reactid*="999999999999999999"]:after { background-image:var(--crew10); }
