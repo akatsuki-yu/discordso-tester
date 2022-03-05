@@ -1,7 +1,7 @@
-/* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える（IDを使用する
- * required : portrait-fixed.css
+/* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える
+ * required : tate-fix.css
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.03.03
+ * Last update : 2022.03.05
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
@@ -47,12 +47,13 @@
 /* クルーメイトアイコン設定部 */
 .voice-state:after {
 	display: inline-block;
-	z-index:1;
 	width: var(--avatarsize);
     height: var(--avatarsize);
 	position:relative;
 	bottom:calc(1.1 * var(--avatarsize));		/* プラスで上に移動。アバタ―サイズ+3～5pxくらいにするといい */
 	left:calc(-0.8 * var(--avatarsize));		/* マイナスで左に移動 */
+
+	z-index:1;
 	background-size: contain;
 	background-repeat: no-repeat;
 	content: '';/*何も入れない*/

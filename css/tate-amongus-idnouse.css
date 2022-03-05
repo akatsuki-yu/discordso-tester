@@ -1,11 +1,10 @@
-/* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える（ID不使用）
- * required : portrait-fixed.css, portrait-fixed-amongus-id.css
+/* Discord Streamkit Overlay用縦並びcssにIDを使用せずクルーメイトアイコンを加える
+ * required : (tate-fix.css, tate-fix-amongus.css) or (tate-flex.css, tate-flex-amongus.css)
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
  * Last update : 2022.03.04
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
-@import url('https://cdn.jsdelivr.net/gh/akatsuki-yu/discordso-tester/css/portrait-fixed-amongus-id.css');
 
 :root {
 	 /* ユーザーID不使用タイプの初期値 */

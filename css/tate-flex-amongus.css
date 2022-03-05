@@ -1,0 +1,78 @@
+/* Discord Streamkit Overlay用縦並びCSSにクルーメイトアイコンを加える
+ * required : tate-flex.css
+ * (c)2021-2022 Yu Akatsuki @akatsuki_yu
+ * Last update : 2022.03.05
+ * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
+ */
+@charset "UTF-8";
+
+:root {
+	--test01:var(--red);
+	--test02:var(--blue);
+	--test03:var(--green);
+	--test04:var(--pink);
+	--test05:var(--orange);
+	--test06:var(--yellow);
+	--test07:var(--black);
+	--test08:var(--white);
+	--test09:var(--purple);
+	--test10:var(--brown);
+
+	/* AutoMuteUs : https://github.com/automuteus/automuteus imgsize: 535*686 */
+	--red:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aured.png');
+	--blue:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublue.png');
+	--green:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augreen.png');
+	--pink:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupink.png');
+	--orange:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auorange.png');
+	--yellow:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auyellow.png');
+	--black:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublack.png');
+	--white:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auwhite.png');
+	--purple:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupurple.png');
+	--brown:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubrown.png');
+	--cyan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucyan.png');
+	--lime:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aulime.png');
+	--maroon:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aumaroon.png');
+	--rose:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aurose.png');
+	--banana:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubanana.png');
+	--gray:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augray.png');
+	--tan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/autan.png');
+	--coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
+}
+
+.voice-container .voice-states .voice-state {
+	flex-flow: row-reverse;
+}
+
+.voice-container .voice-states .voice-state .user {
+	transform: translateX(1.5em);
+}
+
+/* クルーメイトアイコン設定 */
+.voice-state:after {
+	display: block;
+    width: 100%;	/*画像の幅*/
+	max-width:var(--crewmaxwidth);
+	height: var(--iconsize);/*画像の高さ*/
+	max-height:100%;
+	align-self: flex-end;
+	transform: translateX(2.2em);
+
+	z-index:1;
+	background-size: contain;
+	background-repeat:no-repeat;
+	background-position: bottom;
+	content: '';	/*何も入れない*/
+}
+
+
+/* テストデータ用ユーザーID設定 */
+.voice-state[data-reactid*="000000000000000000"]:after { background-image:var(--test01); }
+.voice-state[data-reactid*="111111111111111111"]:after { background-image:var(--test02); }
+.voice-state[data-reactid*="222222222222222222"]:after { background-image:var(--test03); }
+.voice-state[data-reactid*="333333333333333333"]:after { background-image:var(--test04); }
+.voice-state[data-reactid*="444444444444444444"]:after { background-image:var(--test05); }
+.voice-state[data-reactid*="555555555555555555"]:after { background-image:var(--test06); }
+.voice-state[data-reactid*="666666666666666666"]:after { background-image:var(--test07); }
+.voice-state[data-reactid*="777777777777777777"]:after { background-image:var(--test08); }
+.voice-state[data-reactid*="888888888888888888"]:after { background-image:var(--test09); }
+.voice-state[data-reactid*="999999999999999999"]:after { background-image:var(--test10); }

@@ -1,0 +1,98 @@
+/* Discord Streamkit Overlay用縦並びCSS（アイコンサイズ自動変化）
+ * (c)2021-2022 Yu Akatsuki @akatsuki_yu
+ * Last update : 2022.03.05
+ * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
+ */
+@charset "UTF-8";
+
+:root {
+	--crewmaxwidth:80px;
+	--iconsize:100px;
+}
+
+@keyframes pyonpyon {
+	/*20%と30%のtranslateの値を変えることで跳ねる高さを変えられる*/
+	0% { transform: translate(0, 0); }
+	50% { transform: translate(0, -0.6em); }
+	100% { transform: translate(0, 0); }
+}
+
+
+body {
+	overflow:hidden;
+}
+
+.voice-container .voice-states {
+	box-sizing: border-box;
+	list-style-type:none;
+	padding-left:0;
+	padding:15px 7px;
+	margin:0;
+	height:100%;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+}
+
+.voice-container .voice-states .voice-state {
+	height:0;
+	max-height: var(--iconsize);
+	margin-bottom:0.5%;
+	flex:1 1 auto;
+	display: flex;
+	flex-flow: row;
+}
+
+.voice-container .voice-states .voice-state:last-child {
+	margin-bottom:0;
+}
+
+.voice-container .voice-states .voice-state .avatar {
+	height:100%;
+	width:auto;
+	max-width:var(--iconsize);
+	max-height:var(--iconsize);
+	border:0px solid transparent;
+	border-radius:0;
+	float:none;
+	margin-right:0;
+	filter: brightness(35%);
+}
+
+.speaking {
+	filter: brightness(100%) !important;
+	animation: pyonpyon 0.5s infinite ease;
+	/* box-shadow: 0 0 5px 3px yellow; */
+}
+
+.voice-container .voice-states .voice-state .user {
+	display: block;
+	box-sizing: border-box;
+	width:1.1em;
+	height:100%;
+	margin:0 0.4em;
+	padding-top:0;
+	padding:0;
+	z-index:2;
+	/* background-color:rgba(33, 31, 30, 0.75) !important; */
+	transform: translateX(-1.5em);
+}
+
+.voice-container .voice-states .voice-state .user .name {
+	display: block;
+	box-sizing: border-box;
+	width:100%;
+	/* height:inherit; */
+	line-height:1;
+	border-radius:0;
+	writing-mode: vertical-rl;
+	font-size:0.5em !important;
+	letter-spacing: 0.5px;
+	/* background-color:transparent !important; */
+	padding:0.3em;
+	margin:0;
+	overflow:hidden;
+	white-space:nowrap;
+	word-break:break-all;
+}
