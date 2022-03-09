@@ -60,13 +60,13 @@
 }
 
 /* テストデータ用ユーザーID設定 */
-.voice-state[data-reactid*="000000000000000000"]:after { background-image:var(--test01); }
-.voice-state[data-reactid*="111111111111111111"]:after { background-image:var(--test02); }
-.voice-state[data-reactid*="222222222222222222"]:after { background-image:var(--test03); }
-.voice-state[data-reactid*="333333333333333333"]:after { background-image:var(--test04); }
-.voice-state[data-reactid*="444444444444444444"]:after { background-image:var(--test05); }
-.voice-state[data-reactid*="555555555555555555"]:after { background-image:var(--test06); }
-.voice-state[data-reactid*="666666666666666666"]:after { background-image:var(--test07); }
-.voice-state[data-reactid*="777777777777777777"]:after { background-image:var(--test08); }
-.voice-state[data-reactid*="888888888888888888"]:after { background-image:var(--test09); }
-.voice-state[data-reactid*="999999999999999999"]:after { background-image:var(--test10); }
+.voice-state[data-reactid*="111111111111111111"]:after { background-image:var(--test01); }
+.voice-state[data-reactid*="222222222222222222"]:after { background-image:var(--test02); }
+.voice-state[data-reactid*="333333333333333333"]:after { background-image:var(--test03); }
+.voice-state[data-reactid*="444444444444444444"]:after { background-image:var(--test04); }
+.voice-state[data-reactid*="555555555555555555"]:after { background-image:var(--test05); }
+.voice-state[data-reactid*="666666666666666666"]:after { background-image:var(--test06); }
+.voice-state[data-reactid*="777777777777777777"]:after { background-image:var(--test07); }
+.voice-state[data-reactid*="888888888888888888"]:after { background-image:var(--test08); }
+.voice-state[data-reactid*="999999999999999999"]:after { background-image:var(--test09); }
+.voice-state[data-reactid*="000000000000000000"]:after { background-image:var(--test10); }
