@@ -37,6 +37,8 @@
 	--gray:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augray.png');
 	--tan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/autan.png');
 	--coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
+
+	--crewmaxwidth:80px;
 }
 
 .voice-container .voice-states .voice-state {
