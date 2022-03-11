@@ -46,6 +46,8 @@ body {
 
 	flex:1 1 auto;
 	position:relative;
+
+	overflow-x: hidden;
 }
 
 
@@ -83,19 +85,22 @@ body {
 	position:absolute;
 	bottom:0;
 	width:100%;
-	overflow-x: hidden;
+	height:var(--maxiconsize);
 }
 
 .voice-container .voice-states .voice-state .user .name {
 	display: inline-block;
 	box-sizing: border-box;
 	border-radius:0;
-	font-size:20px !important;
+	/* font-size:1em !important; */
 	/* background-color:transparent !important; */
 	padding:3px;
 	margin:0;
+	z-index:10;
 	overflow:hidden;
 	white-space:nowrap;
 	word-break:break-all;
+	position:absolute;
+	bottom:0;
 }
 
