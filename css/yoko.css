@@ -1,0 +1,101 @@
+/* Discord Streamkit Overlay用横並びCSS
+ * (c)2021-2022 Yu Akatsuki @akatsuki_yu
+ * Last update : 2022.03.13
+ * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
+ */
+@charset "UTF-8";
+
+:root {
+	--maxiconsize: 170px;
+	--marginnum:0.25%;
+}
+
+@keyframes pyonpyon {
+	/*20%と30%のtranslateの値を変えることで跳ねる高さを変えられる*/
+	0% { transform: translate(0, 0); }
+	50% { transform: translate(0, -1em); }
+	100% { transform: translate(0, 0); }
+}
+
+
+body {
+	overflow: hidden;
+}
+
+.voice-container .voice-states {
+	box-sizing: border-box;
+	padding-left:0;
+	padding:0 var(--marginnum);
+	margin:0;
+	width:100%;
+	height:100%;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+}
+
+.voice-container .voice-states .voice-state {
+	width:var(--maxiconsize);
+	max-width:var(--maxiconsize);
+	height:auto;
+
+	margin-bottom:0px;
+	margin:0 var(--marginnum);
+	padding:0;
+
+	flex:1 1 auto;
+	position:relative;
+}
+
+
+.voice-container .voice-states .voice-state .avatar {
+	width:100%;
+	height:auto;
+	/* max-width:var(--maxiconsize); */
+	border:0px solid transparent;
+	border-radius:0;
+	float:none;
+	margin-right:0;
+	margin:0;
+
+	z-index:5;
+	position:absolute;
+	bottom:0;
+	filter: brightness(35%);
+}
+
+.speaking {
+	filter: brightness(100%) !important;
+	animation: pyonpyon 0.5s infinite ease;
+	/* box-shadow: 0 0 10px yellow; */
+}
+
+
+.voice-container .voice-states .voice-state .user {
+	display: block;
+	box-sizing: border-box;
+	/* margin:0 0.4em; */
+	padding-top:0;
+	padding:0;
+	z-index:10;
+	/* background-color:rgba(33, 31, 30, 0.75) !important; */
+	position:absolute;
+	bottom:0;
+	width:100%;
+	overflow-x: hidden;
+}
+
+.voice-container .voice-states .voice-state .user .name {
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius:0;
+	font-size:20px !important;
+	/* background-color:transparent !important; */
+	padding:3px;
+	margin:0;
+	overflow:hidden;
+	white-space:nowrap;
+	word-break:break-all;
+}
+
