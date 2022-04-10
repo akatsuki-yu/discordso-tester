@@ -1,6 +1,6 @@
 /* Discord Streamkit Overlay用縦並びCSS（アイコンサイズ自動変化）
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.04.10 Discord Streamkit Overlayに適用しても正しく表示されなかった問題を修正
+ * Last update : 2022.04.10-3 Discord Streamkit Overlayに適用しても正しく表示されなかった問題を修正、細かいところの修正
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
@@ -27,6 +27,7 @@ body {
 	padding:15px 7px;
 	margin:0;
 	height:100%;
+	width:100%;
 
 	display: flex;
 	flex-flow: column nowrap;
@@ -35,7 +36,7 @@ body {
 
 .voice-container .voice-states .voice-state {
 	height: var(--iconsize);
-	width: var(--iconsize);
+	width:100%;
 	margin-bottom:0.5%;
 	flex:1 1 auto;
 	display: flex;
@@ -47,10 +48,8 @@ body {
 }
 
 .voice-container .voice-states .voice-state .avatar {
-	height:100%;
-	width:100%;
-	max-width:var(--iconsize);
-	max-height:var(--iconsize);
+	height: var(--iconsize);
+	width: var(--iconsize);
 	border:0px solid transparent;
 	border-radius:0;
 	float:none;
@@ -69,6 +68,7 @@ body {
 	box-sizing: border-box;
 	width:1.1em;
 	max-height:var(--iconsize);
+	overflow:hidden;
 	margin:0 0.4em;
 	padding-top:0;
 	padding:0;
@@ -90,7 +90,6 @@ body {
 	/* background-color:transparent !important; */
 	padding:0.3em;
 	margin:0;
-	overflow:hidden;
 	white-space:nowrap;
 	word-break:break-all;
 }
