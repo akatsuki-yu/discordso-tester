@@ -34,8 +34,8 @@ body {
 }
 
 .voice-container .voice-states .voice-state {
-	height:0;
-	max-height: var(--iconsize);
+	height: var(--iconsize);
+	width: var(--iconsize);
 	margin-bottom:0.5%;
 	flex:1 1 auto;
 	display: flex;
@@ -48,7 +48,7 @@ body {
 
 .voice-container .voice-states .voice-state .avatar {
 	height:100%;
-	width:auto;
+	width:100%;
 	max-width:var(--iconsize);
 	max-height:var(--iconsize);
 	border:0px solid transparent;
@@ -68,13 +68,13 @@ body {
 	display: block;
 	box-sizing: border-box;
 	width:1.1em;
-	height:100%;
+	max-height:var(--iconsize);
 	margin:0 0.4em;
 	padding-top:0;
 	padding:0;
 	z-index:2;
 	/* background-color:rgba(33, 31, 30, 0.75) !important; */
-	transform: translateX(-1.5em);
+	transform: translateX(-1.3em);
 }
 
 .voice-container .voice-states .voice-state .user .name {
