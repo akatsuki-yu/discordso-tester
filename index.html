@@ -2,6 +2,7 @@
 	2021.06.23 v1.00 Yu Akatsuki @akatsuki_yu
 	2022.02.24 v1.01 Yu Akatsuki @akatsuki_yu ユーザー数を指定可能に（1～20）
 -->
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -20,7 +21,6 @@
   </div>
 
 <script type="text/javascript">
-<!--
 // ページロード時に指定の人数分、アイコン等を並べる。
 // 最小１、最大20。指定がない場合や指定がおかしい場合は10人分生成する。
 // 指定はURL＋「?u=4」のように記述する。　例： https://akatsuki-yu.github.io/streamcss/?u=4
@@ -54,7 +54,6 @@ window.onload = function(){
 				+'<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11.0">' + (i % 2 == 0 ? 'ユーザー' : 'player') + i.toString() + '</span>\n</div>\n</li>\n\n');
 	}
 }
--->
 </script>
 <!--
 生成するHTMLタグ
