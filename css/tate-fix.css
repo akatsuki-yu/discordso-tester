@@ -23,12 +23,12 @@ body {
 	overflow: hidden;
 }
 
-div[class*=Container] {
+div[class*="_voiceContainer_"] {
 	margin:0;
 	padding:0;
 }
 
-ul[class*=States] {
+ul[class*="_voiceStates_"] {
 	padding-left:0;
 	margin:0;
 	position:absolute;
@@ -36,7 +36,7 @@ ul[class*=States] {
 	left:5;
 }
 
-li[class*=State] {
+li[class*="_voiceState_"] {
 	width:var(--avatarsize);
 	height:var(--avatarsize);
     margin-bottom: var(--marginnum);		/* 次のアイコンとの距離 */
@@ -44,30 +44,26 @@ li[class*=State] {
 	position:relative;
 }
 
-img[class*=avatar] {
-	height: var(--avatarsize);
-    width: var(--avatarsize);
+img[class*="_avatar_"] {
     border:0 solid transparent;
     border-radius: 0;
     float: none;
+	height: var(--avatarsize);
     margin-right: 0px;
+    width: var(--avatarsize);
+	
 	margin:0;
-}
-
-img[class*=avatar] {
-	margin:0;
-	border:0;
 	border-color:transparent !important;
 	filter: brightness(40%);
 }
 
-img[class*=Speaking] {
+img[class*="_avatarSpeaking_"] {
 	filter: brightness(100%) !important;
 	animation: pyonpyon 0.5s infinite ease;
 	/* box-shadow: 0 0 10px yellow; */
 }
 
-div[class*=user] {
+div[class*="_user_"] {
 	padding-top:0;
 	/* z-index:2; */
 	position:absolute;
@@ -83,7 +79,7 @@ div[class*=user] {
 	max-width: var(--avatarsize);
 }
 
-.voice-container .voice-states .voice-state .user .name {
+span[class*="_name_"] {
 	display:block;
 	border:0;
 	margin:0;

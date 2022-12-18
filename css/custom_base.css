@@ -22,7 +22,7 @@ body {
 	margin:0
 }
 
-/* div[class*=Container] { */
+/* div[class*="_voiceContainer_"] { */
 .Voice_voiceContainer__adk9M {
 	color:#fff;
 	font-family:gg sans;
@@ -31,19 +31,19 @@ body {
 	line-height:19px
 }
 
-/* ul[class*=States] { */
+/* ul[class*="_voiceStates_"] { */
 .Voice_voiceStates__a121W {
 	list-style-type:none;
 	padding-left:15px
 }
 
-/* li[class*=State] { */
+/* li[class*="_voiceState_"] { */
 .Voice_voiceState__OCoZh {
 	height:50px;
 	margin-bottom:8px
 }
 
-/* img[class*=avatar] { */
+/* img[class*="_avatar_"] { */
 .Voice_avatar__htiqH {
 	border:3px solid transparent;
 	border-radius:50%;
@@ -53,17 +53,17 @@ body {
 	width:50px
 }
 
-/* img[class*=Speaking] { */
+/* img[class*="_avatarSpeaking_"] { */
 .Voice_avatarSpeaking__lE\+4m {
 	border-color:var(--status-green)
 }
 
-/* div[class*=user] { */
+/* div[class*="_user_"] { */
 .Voice_user__8fGwX {
 	padding-top:18px
 }
 
-/* span[class*=name] { */
+/* span[class*="_name_"] { */
 .Voice_name__TALd9 {
 	background-color:var(--guilds-grey);
 	border-radius:3px;

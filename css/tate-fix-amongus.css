@@ -39,13 +39,13 @@
 	 --coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
 }
 
-ul[class*=States] {
+ul[class*="_voiceStates_"] {
 	left:auto;
 	right:5px;
 }
 
 /* クルーメイトアイコン設定部 */
-li[class*=State] img div[class*=user]:after {
+li[class*="_voiceState_"] img div[class*="_user_"]:after {
 	display: inline-block;
 	width: var(--avatarsize);
     height: var(--avatarsize);

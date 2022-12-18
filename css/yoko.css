@@ -21,7 +21,7 @@ body {
 	overflow: hidden;
 }
 
-ul[class*=States] {
+ul[class*="_voiceStates_"] {
 	box-sizing: border-box;
 	padding-left:0;
 	padding:0 var(--marginnum);
@@ -34,7 +34,7 @@ ul[class*=States] {
 	justify-content: flex-start;
 }
 
-li[class*=State] {
+li[class*="_voiceState_"] {
 	width:var(--maxiconsize);
 	max-width:var(--maxiconsize);
 	height:auto;
@@ -50,7 +50,7 @@ li[class*=State] {
 }
 
 
-img[class*=avatar] {
+img[class*="_avatar_"] {
 	width:100%;
 	height:auto;
 	/* max-width:var(--maxiconsize); */
@@ -66,14 +66,14 @@ img[class*=avatar] {
 	filter: brightness(35%);
 }
 
-img[class*=Speaking] {
+img[class*="_avatarSpeaking_"] {
 	filter: brightness(100%) !important;
 	animation: pyonpyon 0.5s infinite ease;
 	/* box-shadow: 0 0 10px yellow; */
 }
 
 
-div[class*=user] {
+div[class*="_user_"] {
 	display: block;
 	box-sizing: border-box;
 	/* margin:0 0.4em; */
@@ -87,7 +87,7 @@ div[class*=user] {
 	height:var(--maxiconsize);
 }
 
-span[class*=name] {
+span[class*="_name_"] {
 	display: inline-block;
 	box-sizing: border-box;
 	border-radius:0;
