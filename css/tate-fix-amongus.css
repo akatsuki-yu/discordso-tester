@@ -59,14 +59,14 @@ li[class*="_voiceState_"] img div[class*="_user_"]:after {
 	content: '';/*何も入れない*/
 }
 
-/* テストデータ用ユーザーID設定 */
-li[class*=State] img[src*="111111111111111111"] div[class*=user]:after { background-image:var(--test01); }
-li[class*=State] img[src*="222222222222222222"] div[class*=user]:after { background-image:var(--test02); }
-li[class*=State] img[src*="333333333333333333"] div[class*=user]:after { background-image:var(--test03); }
-li[class*=State] img[src*="444444444444444444"] div[class*=user]:after { background-image:var(--test04); }
-li[class*=State] img[src*="555555555555555555"] div[class*=user]:after { background-image:var(--test05); }
-li[class*=State] img[src*="666666666666666666"] div[class*=user]:after { background-image:var(--test06); }
-li[class*=State] img[src*="777777777777777777"] div[class*=user]:after { background-image:var(--test07); }
-li[class*=State] img[src*="888888888888888888"] div[class*=user]:after { background-image:var(--test08); }
-li[class*=State] img[src*="999999999999999999"] div[class*=user]:after { background-image:var(--test09); }
-li[class*=State] img[src*="000000000000000000"] div[class*=user]:after { background-image:var(--test10); }
+/* テストデータ用ユーザーID設定（兼 設定見本） */
+li[class*="_voiceState_"] img[src*="player1"] + div[class*="_user_"]:after { background-image:var(--test01); }
+li[class*="_voiceState_"] img[src*="player2"] + div[class*="_user_"]:after { background-image:var(--test02); }
+li[class*="_voiceState_"] img[src*="player3"] + div[class*="_user_"]:after { background-image:var(--test03); }
+li[class*="_voiceState_"] img[src*="player4"] + div[class*="_user_"]:after { background-image:var(--test04); }
+li[class*="_voiceState_"] img[src*="player5"] + div[class*="_user_"]:after { background-image:var(--test05); }
+li[class*="_voiceState_"] img[src*="player6"] + div[class*="_user_"]:after { background-image:var(--test06); }
+li[class*="_voiceState_"] img[src*="player7"] + div[class*="_user_"]:after { background-image:var(--test07); }
+li[class*="_voiceState_"] img[src*="player8"] + div[class*="_user_"]:after { background-image:var(--test08); }
+li[class*="_voiceState_"] img[src*="player9"] + div[class*="_user_"]:after { background-image:var(--test09); }
+li[class*="_voiceState_"] img[src*="player0"] + div[class*="_user_"]:after { background-image:var(--test10); }
