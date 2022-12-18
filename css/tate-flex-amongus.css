@@ -41,7 +41,6 @@
 	--crewmaxheight:var(--iconsize);	/* いるのか？ */
 }
 
-
 /* クルーメイトアイコン設定 */
 /* z-index:avatar/5, user/10, crew/7 */
 
@@ -56,7 +55,7 @@ li[class*="_voiceState_"] img + div[class*="_user_"]:after {
 	top:0;
 
 	transform-origin:bottom right;
-	transform:scale(0.85) translate(0, 100%) rotateZ(-90deg) rotateY(180deg);
+	transform:scale(0.85) translate(0,-150%) rotateZ(-90deg) rotateY(0deg);
 
 	z-index:7;
 	background-size: contain;

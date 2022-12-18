@@ -13,7 +13,7 @@
 @keyframes pyonpyon {
 	/*20%と30%のtranslateの値を変えることで跳ねる高さを変えられる*/
 	0% { transform: translate(0, 0) rotate(-90deg); }
-	50% { transform: translate(0, 0.6em) rotate(-90deg); }
+	50% { transform: translate(0, -0.6em) rotate(-90deg); }
 	100% { transform: translate(0, 0) rotate(-90deg); }
 }
 
@@ -30,7 +30,7 @@ ul[class*="_voiceStates_"] {
 	height:100vh;
 
 	position:absolute;
-	right:0.5vh;
+	left:0.5vh;
 
 	display: flex;
 	flex-flow: row nowrap;
@@ -67,7 +67,7 @@ img[class*="_avatar_"] {
 
 	z-index:5;
 	position:absolute;
-	top:0;
+	bottom:0;
 	filter: brightness(35%);
 	transform:rotate(270deg);
 }
@@ -88,7 +88,7 @@ div[class*="_user_"] {
 	z-index:10;
 	/* background-color:rgba(33, 31, 30, 0.75) !important; */
 	position:absolute;
-	top:0;
+	bottom:0;
 	width:100%;
 	height:var(--maxiconsize);
 }
@@ -106,6 +106,6 @@ span[class*="_name_"] {
 	white-space:nowrap;
 	word-break:break-all;
 	position:absolute;
-	top:0;
+	bottom:0;
 }
 
