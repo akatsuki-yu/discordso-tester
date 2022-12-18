@@ -18,7 +18,6 @@
 }
 
 body {
-	margin:0 0 0 840px;
 	overflow: hidden;
 }
 
@@ -27,8 +26,11 @@ ul[class*="_voiceStates_"] {
 	padding-left:0;
 	padding:0 var(--marginnum);
 	margin:0;
-	width:100%;
+	width:100vh;
 	height:100vh;
+
+	position:absolute;
+	right:0.5vh;
 
 	display: flex;
 	flex-flow: row nowrap;
