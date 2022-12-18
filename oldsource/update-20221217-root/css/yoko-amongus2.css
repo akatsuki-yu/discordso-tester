@@ -1,10 +1,22 @@
 /* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える
  * required : yoko.css
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.03.11
+ * Last update : 2022.03.13
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
+
+@keyframes crewpyonpyon {
+	0% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew01.png'); }
+	10% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew01.png'); }
+	20% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew02.png'); }
+	40% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew03.png'); }
+	60% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew04.png'); }
+	80% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew05.png'); }
+	90% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew06.png'); }
+	100% { background-image:url('https:///tool.albalunaweb.net/discordso-tester/ico/crew06.png'); }
+}
+
 
 :root {
 	--test01:var(--red);
@@ -37,13 +49,12 @@
 	--gray:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augray.png');
 	--tan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/autan.png');
 	--coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
-
 }
 
 /* クルーメイトアイコン設定 */
 /* z-index:avatar/5, user/10, crew/7 */
 
-li[class*=State] img + div[class*=user]:after {
+.user:after {
 	display:block;
     width:  100%;	/*画像の幅*/
 	max-width: var(--crewmaxwidth);
@@ -54,7 +65,7 @@ li[class*=State] img + div[class*=user]:after {
 	bottom:0;
 
 	transform-origin:bottom right;
-	transform:scale(0.5) translate(25%, -0%);
+	/* transform:scale(0.5) translate(25%, -0%); */
 
 	z-index:7;
 	background-size: contain;
@@ -64,15 +75,18 @@ li[class*=State] img + div[class*=user]:after {
 	content: '';	/*何も入れない*/
 }
 
+.speaking + .user:after {
+	animation: crewpyonpyon 0.75s infinite ease;
+}
 
 /* テストデータ用ユーザーID設定（兼 設定見本） */
-li[class*=State] img[src*="player1"] + div[class*=user]:after { background-image:var(--test01); }
-li[class*=State] img[src*="player2"] + div[class*=user]:after { background-image:var(--test02); }
-li[class*=State] img[src*="player3"] + div[class*=user]:after { background-image:var(--test03); }
-li[class*=State] img[src*="player4"] + div[class*=user]:after { background-image:var(--test04); }
-li[class*=State] img[src*="player5"] + div[class*=user]:after { background-image:var(--test05); }
-li[class*=State] img[src*="player6"] + div[class*=user]:after { background-image:var(--test06); }
-li[class*=State] img[src*="player7"] + div[class*=user]:after { background-image:var(--test07); }
-li[class*=State] img[src*="player8"] + div[class*=user]:after { background-image:var(--test08); }
-li[class*=State] img[src*="player9"] + div[class*=user]:after { background-image:var(--test09); }
-li[class*=State] img[src*="player0"] + div[class*=user]:after { background-image:var(--test10); }
+.voice-state[data-reactid*="111111111111111111"] .user:after { background-image:var(--test01); }
+.voice-state[data-reactid*="222222222222222222"] .user:after { background-image:var(--test02); }
+.voice-state[data-reactid*="333333333333333333"] .user:after { background-image:var(--test03); }
+.voice-state[data-reactid*="444444444444444444"] .user:after { background-image:var(--test04); }
+.voice-state[data-reactid*="555555555555555555"] .user:after { background-image:var(--test05); }
+.voice-state[data-reactid*="666666666666666666"] .user:after { background-image:var(--test06); }
+.voice-state[data-reactid*="777777777777777777"] .user:after { background-image:var(--test07); }
+.voice-state[data-reactid*="888888888888888888"] .user:after { background-image:var(--test08); }
+.voice-state[data-reactid*="999999999999999999"] .user:after { background-image:var(--test09); }
+.voice-state[data-reactid*="000000000000000000"] .user:after { background-image:var(--test10); }

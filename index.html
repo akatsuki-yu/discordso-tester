@@ -1,24 +1,28 @@
-<!--
-	2021.06.23 v1.00 Yu Akatsuki @akatsuki_yu
-	2022.02.24 v1.01 Yu Akatsuki @akatsuki_yu ユーザー数を指定可能に（1～20）
--->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,500" rel="stylesheet" type="text/css">
-  <title>Discord StreamKit Overlay Test</title>
-  <link rel="stylesheet" href="./overlay/df54f6f003d712eb9bf4.css"><!-- ファイル名について：README.mdを読んで下さい -->
+<meta charset="utf-8">
+<link rel="icon" href="https://streamkit.discord.com/favicon.ico">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5865F2">
+<meta name="description" content="Customize, promote, and show off your Discord community directly on your stream. Display your Discord chat alongside your Twitch chat so the memes can be shown in unison.">
+<link rel="apple-touch-icon" href="https://streamkit.discord.com/logo192.png">
+<title>Discord Streamkit Overlay</title>
+<!--<script defer="defer" src="https://streamkit.discord.com/static/js/main.7b28706d.js"></script>-->
+<link href="https://streamkit.discord.com/static/css/main.5bc721ef.css" rel="stylesheet">
+<link href="./static/css/new-yoko.css" rel="stylesheet">
+<link href="./static/css/new-yoko-amongus2.css" rel="stylesheet">
 </head>
-<body style="margin: 0;">
-  <div id="app-mount">
-	<div style="font-family:Whitney, sans-serif;background-color:transparent;" class=" " data-reactid=".0">
-		<div class="voice-container" data-reactid=".0.0">
-			<ul class="voice-states" data-reactid=".0.0.0">
-			</ul>
-		</div>
+
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+
+<div id="root">
+	<div class="Voice_voiceContainer__adk9M">
+		<ul class="Voice_voiceStates__a121W">
+		</ul>
 	</div>
-  </div>
+</div>
 
 <script type="text/javascript">
 // ページロード時に指定の人数分、アイコン等を並べる。
@@ -41,27 +45,33 @@ window.onload = function(){
 			}
 		}
 	}
-	const element = document.getElementsByClassName("voice-states");
+	const element = document.getElementsByClassName("Voice_voiceStates__a121W");
 
 	for (var i=1; i <= usercount; i++) {
 		var idnum = i.toString().slice(-1);
 		var idstr = idnum.repeat(18);
 		/* ユーザー生成部 */
 		element[0].insertAdjacentHTML('beforeend' ,
-				'<li class="voice-state" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '">\n'
-				+'<img class="avatar' + (i % 3 == 2 ? ' speaking' : '') + '" src="./ico/player' + idnum + '.png" data-reactid=".0.0.0.$' + idstr + '.$=10">\n'
-				+'<div class="user" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11">\n'
-				+'<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$' + idstr + '/=1$' + idstr + '.$/=11.0">' + (i % 2 == 0 ? 'ユーザー' : 'player') + i.toString() + '</span>\n</div>\n</li>\n\n');
+				'<li class="Voice_voiceState__OCoZh">\n'
+				+'<img class="Voice_avatar__htiqH' + (i % 3 == 2 ? ' Voice_avatarSpeaking__lE+4m' : '') + '" src="./ico/player' + idnum + '.png" alt="">\n'
+				+'<div class="Voice_user__8fGwX">\n'
+				+'<span class="Voice_name__TALd9" style="color: rgb(255, 255, 255); font-size: 14px; background-color: rgba(30, 33, 36, 0.95);">' + (i % 2 == 0 ? 'ユーザー' : 'player') + i.toString() + '</span>\n</div>\n</li>\n\n');
 	}
 }
 </script>
 <!--
 生成するHTMLタグ
-<li class="voice-state" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111">
-	<img class="avatar speaking" src="./ico/player1.png" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111.$=10">
-	<div class="user" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111.$/=11">
-		<span class=" name" style="color:#ffffff;font-size:14px;background-color:rgba(30, 33, 36, 0.95);" data-reactid=".0.0.0.$111111111111111111/=1$111111111111111111.$/=11.0">プレイヤー１</span>
+<li class="Voice_voiceState__OCoZh">
+	<img class="Voice_avatar__htiqH" src="https://cdn.discordapp.com/avatars/398064385312030729/032844602269033cba0c7b40ac8fbb5b.jpg" alt="">
+	<div class="Voice_user__8fGwX">
+	<span class="Voice_name__TALd9" style="color: rgb(255, 255, 255); font-size: 14px; background-color: rgba(30, 33, 36, 0.95);">Yu Akatsuki</span>
 	</div>
 </li>
 -->
-</body></html>
+
+<script>
+(function(){var js = "window['__CF$cv$params']={r:'77ad02215d56e090',m:'Wg5AV37GX6ps4Db8rT2NUB7pwGP0O_Y75K9aGA3anAQ-1671252316-0-AVFaxLIZAWh8Ebsa7su+rJTGuFhxkAj7pagIlnz9o8tb9VBHOWmJGDenrD/p0OGQE68p+oKAUpi5Uu6HverA98IMZdwTHJw1RYCuyfzW5asfvi6Dy/g13y8vhwx3xU2w98SLf+vXwuEq9KeKjMsVo+I9fzk2CAjdedwWIOzWPxIqlbSso7EuKwqraxq024lB0KRGVl1Y7SPbgwoEXMmirV3XfEDo1xSh11QdhC3jJhHAvTKM4Ox9lbEG9mHo6lddmijMFn8LAv4/mrnWBHcFWXwLOawRrvKk5i/V9rDLKZ2eD8ZNY8S/OlIg9JLJTouLL9X6nfbf2ZQTi0NB/7PtqV7raR/kvliHPzDTmwegF05IXoRsSyKH81bBpUu2RtRFR2/ylzyCSaqPJLgXrBO3EyAboUBy6HgFy9UxAitA2FqnVRFDSp7+7c/+bYlEGujnmDvNn85luEDthZhw9OexY4PizDAev56HaWMGY2wDl1e6cf7iCtzdx9OtfnCERAUWEZHkk2SPwi1w2qiiWuzA8QrpldsoH9ygUgL4EZ2+7aL2Mrtb/4pz5AB3QdByKgx0wBfzPvPuRTePterTBcox/QzUJ0UwV8t7qpCTGzaW90MX',s:[0x2cda14483e,0x9f594ee4e8],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();
+</script>
+<iframe style="position: absolute; top: 0px; left: 0px; border: medium none; visibility: hidden;" width="1" height="1"></iframe>
+</body>
+</html>

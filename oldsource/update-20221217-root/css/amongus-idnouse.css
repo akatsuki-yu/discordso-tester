@@ -1,0 +1,43 @@
+/* Discord Streamkit Overlay用カスタムcssにIDを使用せずクルーメイトアイコンを加える
+ * required :tate-fix-amongus.css OR tate-flex-amongus.css OR yoko-amongus.css
+ * (c)2021-2022 Yu Akatsuki @akatsuki_yu
+ * Last update : 2022.03.04
+ * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
+ */
+@charset "UTF-8";
+
+:root {
+	 /* ユーザーID不使用タイプの初期値 */
+	 --crew01:var(--red);
+	 --crew02:var(--blue);
+	 --crew03:var(--green);
+	 --crew04:var(--pink);
+	 --crew05:var(--orange);
+	 --crew06:var(--yellow);
+	 --crew07:var(--black);
+	 --crew08:var(--white);
+	 --crew09:var(--purple);
+	 --crew10:var(--brown);
+	 --crew11:var(--cyan);
+	 --crew12:var(--lime);
+	 --crew13:var(--maroon);
+	 --crew14:var(--rose);
+	 --crew15:var(--banana);
+}
+
+/* ユーザーID不使用タイプの設定群 */
+.voice-state:nth-child(1)::after {	background-image:var(--crew01);}
+.voice-state:nth-child(2)::after {	background-image:var(--crew02);}
+.voice-state:nth-child(3)::after {	background-image:var(--crew03);}
+.voice-state:nth-child(4)::after {	background-image:var(--crew04);}
+.voice-state:nth-child(5)::after {	background-image:var(--crew05);}
+.voice-state:nth-child(6)::after {	background-image:var(--crew06);}
+.voice-state:nth-child(7)::after {	background-image:var(--crew07);}
+.voice-state:nth-child(8)::after {	background-image:var(--crew08);}
+.voice-state:nth-child(9)::after {	background-image:var(--crew09);}
+.voice-state:nth-child(10)::after {	background-image:var(--crew10);}
+.voice-state:nth-child(11)::after {	background-image:var(--crew11);}
+.voice-state:nth-child(12)::after {	background-image:var(--crew12);}
+.voice-state:nth-child(13)::after {	background-image:var(--crew13);}
+.voice-state:nth-child(14)::after {	background-image:var(--crew14);}
+.voice-state:nth-child(15)::after {	background-image:var(--crew15);}

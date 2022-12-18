@@ -1,8 +1,8 @@
-/* Discord Streamkit Overlay用にIDを使用せずクルーメイトアイコンを加える
+/* Discord Streamkit Overlay用カスタムcssにIDを使用せずクルーメイトアイコンを加える
  * amongus-idnouse.cssと同じソース。過去のcssを読み込んでいる人向けに残してある
- * required : tate-fix-amongus.css OR tate-flex-amongus.css
+ * required :tate-fix-amongus.css OR tate-flex-amongus.css OR yoko-amongus.css
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.03.04
+ * Last update : 2022.12.18
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
@@ -27,18 +27,18 @@
 }
 
 /* ユーザーID不使用タイプの設定群 */
-.voice-state:nth-child(1)::after {	background-image:var(--crew01);}
-.voice-state:nth-child(2)::after {	background-image:var(--crew02);}
-.voice-state:nth-child(3)::after {	background-image:var(--crew03);}
-.voice-state:nth-child(4)::after {	background-image:var(--crew04);}
-.voice-state:nth-child(5)::after {	background-image:var(--crew05);}
-.voice-state:nth-child(6)::after {	background-image:var(--crew06);}
-.voice-state:nth-child(7)::after {	background-image:var(--crew07);}
-.voice-state:nth-child(8)::after {	background-image:var(--crew08);}
-.voice-state:nth-child(9)::after {	background-image:var(--crew09);}
-.voice-state:nth-child(10)::after {	background-image:var(--crew10);}
-.voice-state:nth-child(11)::after {	background-image:var(--crew11);}
-.voice-state:nth-child(12)::after {	background-image:var(--crew12);}
-.voice-state:nth-child(13)::after {	background-image:var(--crew13);}
-.voice-state:nth-child(14)::after {	background-image:var(--crew14);}
-.voice-state:nth-child(15)::after {	background-image:var(--crew15);}
+li[class*=State]:nth-child(1) img + div[class*=user]:after {	background-image:var(--crew01);}
+li[class*=State]:nth-child(2) img + div[class*=user]:after {	background-image:var(--crew02);}
+li[class*=State]:nth-child(3) img + div[class*=user]:after {	background-image:var(--crew03);}
+li[class*=State]:nth-child(4) img + div[class*=user]:after {	background-image:var(--crew04);}
+li[class*=State]:nth-child(5) img + div[class*=user]:after {	background-image:var(--crew05);}
+li[class*=State]:nth-child(6) img + div[class*=user]:after {	background-image:var(--crew06);}
+li[class*=State]:nth-child(7) img + div[class*=user]:after {	background-image:var(--crew07);}
+li[class*=State]:nth-child(8) img + div[class*=user]:after {	background-image:var(--crew08);}
+li[class*=State]:nth-child(9) img + div[class*=user]:after {	background-image:var(--crew09);}
+li[class*=State]:nth-child(10) img + div[class*=user]:after {	background-image:var(--crew10);}
+li[class*=State]:nth-child(11) img + div[class*=user]:after {	background-image:var(--crew11);}
+li[class*=State]:nth-child(12) img + div[class*=user]:after {	background-image:var(--crew12);}
+li[class*=State]:nth-child(13) img + div[class*=user]:after {	background-image:var(--crew13);}
+li[class*=State]:nth-child(14) img + div[class*=user]:after {	background-image:var(--crew14);}
+li[class*=State]:nth-child(15) img + div[class*=user]:after {	background-image:var(--crew15);}

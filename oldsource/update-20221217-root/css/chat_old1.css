@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;800&display=swap');
+
+/* font-family: 'M PLUS Rounded 1c', sans-serif; */
+
+body {
+	overflow:hidden;
+	font-size:16pt;
+}
+.chat-container {
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	width:500px;
+}
+.chat-container .channel-name {
+	line-height:auto;
+	font-size:20pt;
+	padding:0.5em;
+	height:auto;
+	background-color:rgba(21, 43, 138, 0.8) !important;
+}
+.chat-container .channel-name .pound-sign {
+}
+.chat-container .messages {
+	height:450px;
+	background-color: rgba(33, 33, 33, 0.9) !important;
+}
+.chat-container .messages .message {
+	max-height:inherit;
+}
+.chat-container .messages .message.hidden {
+}
+.chat-container .messages .message .timestamp {
+	display:none;
+}
+.chat-container .messages .message .username {
+	display:block;
+	font-size:1.1em;
+	margin:0.7em 0 0.3em;
+}
+
+.chat-container .messages .message .message-text,
+.chat-container .messages .message .username
+{
+}
+.chat-container .messages .message .message-text {
+	font-weight:500;
+}
+.chat-container .messages .message .message-text .emoji {
+}

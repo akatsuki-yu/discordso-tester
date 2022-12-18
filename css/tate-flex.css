@@ -1,95 +1,109 @@
 /* Discord Streamkit Overlay用縦並びCSS（アイコンサイズ自動変化）
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.04.10-3 Discord Streamkit Overlayに適用しても正しく表示されなかった問題を修正、細かいところの修正
+ * Last update : 2022.12.18
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
 
 :root {
-	--iconsize:100px;
+	--maxiconsize: 170px;
+	--marginnum:0.25%;
 }
 
 @keyframes pyonpyon {
 	/*20%と30%のtranslateの値を変えることで跳ねる高さを変えられる*/
-	0% { transform: translate(0, 0); }
-	50% { transform: translate(0, -0.6em); }
-	100% { transform: translate(0, 0); }
+	0% { transform: translate(0, 0) rotate(-90deg); }
+	50% { transform: translate(0, 0.6em) rotate(-90deg); }
+	100% { transform: translate(0, 0) rotate(-90deg); }
 }
-
 
 body {
-	overflow:hidden;
+	margin:0 0 0 840px;
+	overflow: hidden;
 }
 
-.voice-container .voice-states {
+ul[class*=States] {
 	box-sizing: border-box;
 	padding-left:0;
-	padding:15px 7px;
+	padding:0 var(--marginnum);
 	margin:0;
-	height:100%;
 	width:100%;
+	height:100vh;
 
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: row nowrap;
 	justify-content: flex-start;
+
+	transform: rotate(90deg);
 }
 
-.voice-container .voice-states .voice-state {
-	height: var(--iconsize);
-	width:100%;
-	margin-bottom:0.5%;
+li[class*=State] {
+	width:var(--maxiconsize);
+	max-width:var(--maxiconsize);
+	height:auto;
+
+	margin-bottom:0px;
+	margin:0 var(--marginnum);
+	padding:0;
+
 	flex:1 1 auto;
-	display: flex;
-	flex-flow: row;
+	position:relative;
+
+	overflow-x: hidden;
 }
 
-.voice-container .voice-states .voice-state:last-child {
-	margin-bottom:0;
-}
 
-.voice-container .voice-states .voice-state .avatar {
-	height: var(--iconsize);
-	width: var(--iconsize);
+img[class*=avatar] {
+	width:100%;
+	height:auto;
+	/* max-width:var(--maxiconsize); */
 	border:0px solid transparent;
 	border-radius:0;
 	float:none;
 	margin-right:0;
+	margin:0;
+
+	z-index:5;
+	position:absolute;
+	top:0;
 	filter: brightness(35%);
+	transform:rotate(270deg);
 }
 
-.speaking {
+img[class*=Speaking] {
 	filter: brightness(100%) !important;
 	animation: pyonpyon 0.5s infinite ease;
-	/* box-shadow: 0 0 5px 3px yellow; */
+	/* box-shadow: 0 0 10px yellow; */
 }
 
-.voice-container .voice-states .voice-state .user {
+
+div[class*=user] {
 	display: block;
 	box-sizing: border-box;
-	width:1.1em;
-	max-height:var(--iconsize);
-	overflow:hidden;
-	margin:0 0.4em;
+	/* margin:0 0.4em; */
 	padding-top:0;
 	padding:0;
-	z-index:2;
+	z-index:10;
 	/* background-color:rgba(33, 31, 30, 0.75) !important; */
-	transform: translateX(-1.3em);
+	position:absolute;
+	top:0;
+	width:100%;
+	height:var(--maxiconsize);
 }
 
-.voice-container .voice-states .voice-state .user .name {
-	display: block;
+span[class*=name] {
+	display: inline-block;
 	box-sizing: border-box;
-	width:100%;
-	/* height:inherit; */
-	line-height:1;
 	border-radius:0;
-	writing-mode: vertical-rl;
-	font-size:0.5em !important;
-	letter-spacing: 0.5px;
+	/* font-size:1em !important; */
 	/* background-color:transparent !important; */
-	padding:0.3em;
+	padding:3px;
 	margin:0;
+	z-index:10;
+	overflow:hidden;
 	white-space:nowrap;
 	word-break:break-all;
+	position:absolute;
+	top:0;
 }
+

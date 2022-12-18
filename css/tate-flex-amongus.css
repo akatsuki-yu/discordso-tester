@@ -1,7 +1,7 @@
 /* Discord Streamkit Overlay用縦並びCSSにクルーメイトアイコンを加える
  * required : tate-flex.css
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.03.05
+ * Last update : 2022.12.18
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
@@ -38,43 +38,42 @@
 	--tan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/autan.png');
 	--coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
 
-	--crewmaxwidth:80px;
+	--crewmaxheight:var(--iconsize);	/* いるのか？ */
 }
 
-.voice-container .voice-states .voice-state {
-	flex-flow: row-reverse;
-}
-
-.voice-container .voice-states .voice-state .user {
-	transform: translateX(1.5em);
-}
 
 /* クルーメイトアイコン設定 */
-.voice-state:after {
-	display: block;
-    width: 100%;	/*画像の幅*/
-	max-width:var(--crewmaxwidth);
-	height: var(--iconsize);/*画像の高さ*/
-	max-height:100%;
-	align-self: flex-end;
-	transform: translateX(2.2em);
+/* z-index:avatar/5, user/10, crew/7 */
 
-	z-index:1;
+li[class*=State] img + div[class*=user]:after {
+	display:block;
+    width:  100%;	/*画像の幅*/
+	max-width: var(--crewmaxwidth);
+    height: 0;		/*画像の高さ*/
+	padding-top:100%;
+
+	position:absolute;
+	top:0;
+
+	transform-origin:bottom right;
+	transform:scale(0.85) translate(0, 100%) rotateZ(-90deg) rotateY(180deg);
+
+	z-index:7;
 	background-size: contain;
 	background-repeat:no-repeat;
-	background-position: bottom;
+	background-position:right bottom;
+	background-position:left bottom;
 	content: '';	/*何も入れない*/
 }
 
-
-/* テストデータ用ユーザーID設定 */
-.voice-state[data-reactid*="111111111111111111"]:after { background-image:var(--test01); }
-.voice-state[data-reactid*="222222222222222222"]:after { background-image:var(--test02); }
-.voice-state[data-reactid*="333333333333333333"]:after { background-image:var(--test03); }
-.voice-state[data-reactid*="444444444444444444"]:after { background-image:var(--test04); }
-.voice-state[data-reactid*="555555555555555555"]:after { background-image:var(--test05); }
-.voice-state[data-reactid*="666666666666666666"]:after { background-image:var(--test06); }
-.voice-state[data-reactid*="777777777777777777"]:after { background-image:var(--test07); }
-.voice-state[data-reactid*="888888888888888888"]:after { background-image:var(--test08); }
-.voice-state[data-reactid*="999999999999999999"]:after { background-image:var(--test09); }
-.voice-state[data-reactid*="000000000000000000"]:after { background-image:var(--test10); }
+/* テストデータ用ユーザーID設定（兼 設定見本） */
+li[class*=State] img[src*="player1"] + div[class*=user]:after { background-image:var(--test01); }
+li[class*=State] img[src*="player2"] + div[class*=user]:after { background-image:var(--test02); }
+li[class*=State] img[src*="player3"] + div[class*=user]:after { background-image:var(--test03); }
+li[class*=State] img[src*="player4"] + div[class*=user]:after { background-image:var(--test04); }
+li[class*=State] img[src*="player5"] + div[class*=user]:after { background-image:var(--test05); }
+li[class*=State] img[src*="player6"] + div[class*=user]:after { background-image:var(--test06); }
+li[class*=State] img[src*="player7"] + div[class*=user]:after { background-image:var(--test07); }
+li[class*=State] img[src*="player8"] + div[class*=user]:after { background-image:var(--test08); }
+li[class*=State] img[src*="player9"] + div[class*=user]:after { background-image:var(--test09); }
+li[class*=State] img[src*="player0"] + div[class*=user]:after { background-image:var(--test10); }

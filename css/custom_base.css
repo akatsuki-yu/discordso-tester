@@ -1,71 +1,84 @@
-/*
-* 2021.06.23 @akatsuki_yu
-* 2022.02.24 @akatsuki_yu update html側にベタ書きされている要素を追加
-*/
-
-body{
- /* 上はhtmlにベタ書きされている箇所 */
- /* margin:0; */
-	background-color:transparent
+:root {
+	--font-primary:"gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	--font-display:"gg sans","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	--font-headline:"ABC Ginto Nord","Noto Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	--font-code:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace
 }
 
-/* body直下にあるID。voice-containerの上。cssには何も記述無し */
-#app-mount {
+:root {
+	--brand:#5865f2;
+	--brand-dark:#4957f1;
+	--grey-1:#99aab5;
+	--grey-3:#737f8d;
+	--grey-6:#4f545c;
+	--guilds-grey:#1e2124;
+	--status-grey:#604f56;
+	--status-green:#3ba53b
 }
 
-#app-mount > div {
-	/* ２行ともhtmlにベタ書きされている */
-	/* font-family:Whitney, sans-serif; */
-	/* background-color:transparent; */
+body {
+	background-color:initial;
+	font-family:gg sans,sans-serif;
+	margin:0
 }
 
-.voice-container{
-	font-family:Whitney;
-	font-weight:600;
+/* div[class*=Container] { */
+.Voice_voiceContainer__adk9M {
+	color:#fff;
+	font-family:gg sans;
 	font-size:16px;
-	line-height:19px;
-	color:#fff
+	font-weight:600;
+	line-height:19px
 }
-.voice-container .voice-states{
+
+/* ul[class*=States] { */
+.Voice_voiceStates__a121W {
 	list-style-type:none;
 	padding-left:15px
 }
-.voice-container .voice-states .voice-state{
+
+/* li[class*=State] { */
+.Voice_voiceState__OCoZh {
 	height:50px;
 	margin-bottom:8px
 }
-.voice-container .voice-states .voice-state .avatar{
-	height:50px;
-	width:50px;
+
+/* img[class*=avatar] { */
+.Voice_avatar__htiqH {
 	border:3px solid transparent;
 	border-radius:50%;
 	float:left;
-	margin-right:8px
+	height:50px;
+	margin-right:8px;
+	width:50px
 }
-.voice-container .voice-states .voice-state .avatar.speaking{
-	border-color:#43b581
+
+/* img[class*=Speaking] { */
+.Voice_avatarSpeaking__lE\+4m {
+	border-color:var(--status-green)
 }
-.voice-container .voice-states .voice-state .user{
+
+/* div[class*=user] { */
+.Voice_user__8fGwX {
 	padding-top:18px
 }
-.voice-container .voice-states .voice-state .user .name{
-	background-color:#1e2124;
+
+/* span[class*=name] { */
+.Voice_name__TALd9 {
+	background-color:var(--guilds-grey);
 	border-radius:3px;
 	padding:4px 6px
 }
-.name {
-	/* 全行htmlにベタ書きされているstyle */
-	/* color:#ffffff; */
-	/* font-size:14px; */
-	/* background-color:rgba(30, 33, 36, 0.95); */
-}
-.voice-container .voice-states .voice-state.small-avatar{
+
+.Voice_smallAvatar__tPOas {
 	height:40px
 }
-.voice-container .voice-states .voice-state.small-avatar .avatar{
+
+.Voice_smallAvatarAvatar__gX9I5 {
 	height:40px;
 	width:40px
 }
-.voice-container .voice-states .voice-state.small-avatar .user{
+
+.Voice_smallAvatarUser__pIEbt {
 	padding-top:12px
 }

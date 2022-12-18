@@ -1,13 +1,13 @@
 /* Discord Streamkit Overlay用縦並びCSS（人数を自分で指定）
  * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.12.18
+ * Last update : 2022.03.03
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
  */
 @charset "UTF-8";
 
 :root {
 	--usernum:10;		/* プレイヤー人数初期値。計算に使う */
-	--marginnum:0.6em;	/* アイコン同士の隙間の定義。計算に使う */
+	--marginnum:5px;	/* アイコン同士の隙間の定義。計算に使う */
 
 	/* Discordのアイコン（アバタ―）のサイズを算出するところ */
 	--avatarsize:calc((100vh - var(--marginnum) * (var(--usernum) + 3) ) / var(--usernum));
@@ -23,12 +23,12 @@ body {
 	overflow: hidden;
 }
 
-div[class*=Container] {
+.voice-container {
 	margin:0;
 	padding:0;
 }
 
-ul[class*=States] {
+.voice-container .voice-states {
 	padding-left:0;
 	margin:0;
 	position:absolute;
@@ -36,7 +36,7 @@ ul[class*=States] {
 	left:5;
 }
 
-li[class*=State] {
+.voice-container .voice-states .voice-state {
 	width:var(--avatarsize);
 	height:var(--avatarsize);
     margin-bottom: var(--marginnum);		/* 次のアイコンとの距離 */
@@ -44,7 +44,7 @@ li[class*=State] {
 	position:relative;
 }
 
-img[class*=avatar] {
+.voice-container .voice-states .voice-state .avatar {
 	height: var(--avatarsize);
     width: var(--avatarsize);
     border:0 solid transparent;
@@ -54,20 +54,24 @@ img[class*=avatar] {
 	margin:0;
 }
 
-img[class*=avatar] {
+.avatar {
 	margin:0;
-	border:0;
-	border-color:transparent !important;
 	filter: brightness(40%);
 }
 
-img[class*=Speaking] {
+
+.voice-container .voice-states .voice-state .avatar.speaking {
+	border-color:transparent !important;
+}
+
+.speaking {
 	filter: brightness(100%) !important;
 	animation: pyonpyon 0.5s infinite ease;
+	border:0;
 	/* box-shadow: 0 0 10px yellow; */
 }
 
-div[class*=user] {
+.voice-container .voice-states .voice-state .user {
 	padding-top:0;
 	/* z-index:2; */
 	position:absolute;
