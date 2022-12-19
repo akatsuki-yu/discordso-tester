@@ -39,19 +39,16 @@
 	 --coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
 }
 
-ul[class*="_voiceStates_"] {
-	left:auto;
-	right:5px;
-}
-
 /* クルーメイトアイコン設定部 */
-li[class*="_voiceState_"] img div[class*="_user_"]:after {
-	display: inline-block;
+li[class*="_voiceState_"] img + div[class*="_user_"]:after {
+	display: block;
 	width: var(--avatarsize);
     height: var(--avatarsize);
-	position:relative;
-	bottom:calc(1.1 * var(--avatarsize));		/* プラスで上に移動。アバタ―サイズ+3～5pxくらいにするといい */
-	left:calc(-0.8 * var(--avatarsize));		/* マイナスで左に移動 */
+	position:absolute;
+	bottom:0;		/* プラスで上に移動。アバタ―サイズ+3～5pxくらいにするといい */
+	left:calc(var(--avatarsize) * 0.9);
+	transform: scale(0.9);
+	transform-origin: bottom right;
 
 	z-index:1;
 	background-size: contain;

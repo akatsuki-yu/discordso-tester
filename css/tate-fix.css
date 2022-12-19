@@ -30,29 +30,35 @@ div[class*="_voiceContainer_"] {
 
 ul[class*="_voiceStates_"] {
 	padding-left:0;
+	
+	overflow: hidden;
+	width:100%;
 	margin:0;
 	position:absolute;
 	top:calc(var(--marginnum) * 2);
-	left:5;
+	left:calc(var(--marginnum) / 2);
+	padding:0;
 }
 
 li[class*="_voiceState_"] {
-	width:var(--avatarsize);
 	height:var(--avatarsize);
     margin-bottom: var(--marginnum);		/* 次のアイコンとの距離 */
 	list-style-type: none;
 	position:relative;
 }
 
+
 img[class*="_avatar_"] {
     border:0 solid transparent;
     border-radius: 0;
     float: none;
-	height: var(--avatarsize);
     margin-right: 0px;
     width: var(--avatarsize);
+	height: var(--avatarsize);
 	
-	margin:0;
+	position:absolute;
+	bottom:0;
+	left:0;
 	border-color:transparent !important;
 	filter: brightness(40%);
 }
@@ -65,19 +71,19 @@ img[class*="_avatarSpeaking_"] {
 
 div[class*="_user_"] {
 	padding-top:0;
-	/* z-index:2; */
+
+	display:block;
 	position:absolute;
 	left:0;
 	bottom:0;
-	display:inline-block;
 	text-align:left;
-	overflow:hidden;
-	/* background-color:rgba(33, 31, 30, 0.6) !important; */
 	white-space:nowrap;
 	word-break:break-all;
 	transform-origin: left bottom;
-	max-width: var(--avatarsize);
+	width:var(--avatarsize);
+	height:var(--avatarsize);
 }
+
 
 span[class*="_name_"] {
 	display:block;
@@ -85,5 +91,13 @@ span[class*="_name_"] {
 	margin:0;
 	border-radius:0;
 	/* background-color:transparent !important; */
+	position:absolute;
+	bottom:0;
+	left:0;
+
+	max-width:var(--avatarsize);
+	overflow-x:hidden;
 }
+
+
 
