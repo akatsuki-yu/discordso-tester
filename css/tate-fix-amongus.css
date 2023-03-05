@@ -1,8 +1,9 @@
 /* Discord Streamkit Overlay用縦並びcssにクルーメイトアイコンを加える
  * required : tate-fix.css
- * (c)2021-2022 Yu Akatsuki @akatsuki_yu
- * Last update : 2022.12.18
+ * (c)2021-2023 Yu Akatsuki @akatsuki_yu
+ * Last update : 2023.03.05 Change link of crewmate icons
  * Released under the MIT license -- https://opensource.org/licenses/mit-license.php
+ * Crewmate icons by GitHub / AutoMuteUs : https://github.com/automuteus/automuteus imgsize: 535*686
  */
 @charset "UTF-8";
 
@@ -19,24 +20,24 @@
 	--test10:var(--brown);
 
 	 /* AutoMuteUs : https://github.com/automuteus/automuteus imgsize: 535*686 */
-	 --red:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aured.png');
-	 --blue:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublue.png');
-	 --green:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augreen.png');
-	 --pink:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupink.png');
-	 --orange:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auorange.png');
-	 --yellow:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auyellow.png');
-	 --black:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aublack.png');
-	 --white:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/auwhite.png');
-	 --purple:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aupurple.png');
-	 --brown:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubrown.png');
-	 --cyan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucyan.png');
-	 --lime:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aulime.png');
-	 --maroon:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aumaroon.png');
-	 --rose:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aurose.png');
-	 --banana:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aubanana.png');
-	 --gray:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/augray.png');
-	 --tan:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/autan.png');
-	 --coral:url('https://cdn.jsdelivr.net/gh/automuteus/automuteus@6.16.7/assets/emojis/aucoral.png');
+	--red:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831327126528021/aured.png');
+	--blue:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831291835666553/aublue.png');
+	--green:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831293106536478/augreen.png');
+	--pink:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831326497382460/aupink.png');
+	--orange:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831326216368178/auorange.png');
+	--yellow:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831328363851826/auyellow.png');
+	--black:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831291613364264/aublack.png');
+	--white:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831328061866024/auwhite.png');
+	--purple:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831326803570791/aupurple.png');
+	--brown:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831292183781436/aubrown.png');
+	--cyan:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831292666138685/aucyan.png');
+	--lime:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831293358198854/aulime.png');
+	--maroon:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831293588873236/aumaroon.png');
+	--rose:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831327378194463/aurose.png');
+	--banana:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831291378475048/aubanana.png');
+	--gray:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831292905201735/augray.png');
+	--tan:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831327688564906/autan.png');
+	--coral:url('https://cdn.discordapp.com/attachments/1081831113539985428/1081831292435447918/aucoral.png');
 }
 
 /* クルーメイトアイコン設定部 */
